@@ -9,7 +9,7 @@ pipeline {
 	    
             stage('build') {
                steps {
-                     sh 'rsync -avh -e "ssh -i /var/lib/jenkins/OregonKey.pem" /var/lib/jenkins/workspace/Pipline1 ubuntu@10.0.2.248:/home/ubuntu/app/'
+                     bash 'rsync -avh -e "ssh -i /var/lib/jenkins/OregonKey.pem" /var/lib/jenkins/workspace/Pipline1 ubuntu@10.0.2.248:/home/ubuntu/app/'
          }
        }
     }
